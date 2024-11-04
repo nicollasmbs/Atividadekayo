@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Carrinho de Compras</h1>
+    <ul id="lista-carrinho"></ul>
+    
+    <script src="script.js"></script>
+    <script>
+        
+        function exibirCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            let listaCarrinho = document.getElementById('lista-carrinho');
+            listaCarrinho.innerHTML = '';
+
+            carrinho.forEach(produto => {
+                let item = document.createElement('li');
+                item.textContent = produto;
+                listaCarrinho.appendChild(item);
+            });
+        }
+
+        exibirCarrinho();
+    </script>
+</body>
+</html>

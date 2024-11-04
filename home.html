@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
+<div id="cart" style="display: none;">
+    <h2>Carrinho de Compras</h2>
+    <div id="cart-items"></div>
+    <p id="total-price">Total: R$0,00</p>
+    <button onclick="checkout()">Finalizar Compra</button>
+    <button onclick="closeCart()">Fechar</button>
+</div>
 <body>
     <header>
         <h1>Orgãos Baratos Rápido</h1>
@@ -26,6 +34,13 @@
                 <i class="fas fa-phone"></i> Contato
                 </button>
             </a>
+        </a>
+        <button onclick="toggleDarkMode()" id="theme-toggle">
+            🌙 Alternar Tema
+        </button>
+            <a href="carrinho.html">
+                <button><i class="fas fa-shopping-cart"></i> Carrinho</button>
+            </a>
         </nav>
         
     </header>
@@ -42,7 +57,8 @@
                 <br>
                 <br>
                 <a href="produto.html" class="link"> Coração</a>
-            </div>
+                <button onclick="adicionarAoCarrinho('Coração')">Adicionar ao Carrinho</button>
+</div>
             <div class="produto">
                 <a href="produto.html" class="link">
                 <img src="imagens/pulmão-desenho.jpg" alt="Pulmão">
@@ -50,7 +66,8 @@
                 <br>
                 <br>
                 <a href="produto.html" class="link"> Pulmão</a>
-            </div>
+                <button onclick="adicionarAoCarrinho('Pulmão')">Adicionar ao Carrinho</button>
+</div>   
             <div class="produto">
                 <a href="produto.html" class="link">
                 <img src="imagens/0f5569c92db3c50db59fe8e6265425a9.jpg" alt="Rins">
@@ -58,7 +75,8 @@
                 <br>
                 <br>
                 <a href="produto.html" class="link"> Rins</a>
-            </div>
+                <button onclick="adicionarAoCarrinho('Pulmão')">Adicionar ao Carrinho</button>
+</div>
             <div class="produto">
                 <a href="produto.html" class="link">
                 <img src="Imagens/pngtree-cute-character-liver-smiling-cartoon-human-internal-organ-png-image_4276844.jpg" alt="Fígado">
@@ -66,7 +84,8 @@
                 <br>
                 <br>
                 <a href="produto,html" class="link"> Fígado</a>
-            </div>
+                <button onclick="adicionarAoCarrinho('Pulmão')">Adicionar ao Carrinho</button>
+</div>
             <div class="produto">
                 <a href="produto.html" class="link">
                 <img src="Imagens/desenho-animado-pancreas-corpo-saudável-caráter-de-órgão-humano-parte-vetora-dos-sistemas-digestivos-e-endócrinos-pessoa-268469743.jpg" alt="Pancreas">
@@ -74,7 +93,8 @@
                 <br>
                 <br>
                 <a href="produto.html" class="link"> Pancreas</a>
-            </div>
+                <button onclick="adicionarAoCarrinho('Pulmão')">Adicionar ao Carrinho</button>
+</div>
         </div>
         <br>
         <h2>Venha conhecer nosso trabalho</h2>
@@ -98,4 +118,5 @@
         </div>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>

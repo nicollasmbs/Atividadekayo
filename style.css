@@ -276,3 +276,25 @@ button {
 .produto-info button:hover {
     background-color: #d40000;
 }
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --button-bg-color: #f0f0f0;
+}
+
+:root.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --button-bg-color: #333333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+}
